@@ -32,19 +32,21 @@
   },
   "scripts": {
     "build": "tsup",
-    "prepublish": "pnpm debug",
-    "debug": "pnpm build && panda debug -c debug/panda.config.ts"
+    "prepublish": "bun debug",
+    "gen-types": "bun scripts/gen-types.ts",
+    "debug": "bun run build && panda debug -c debug/panda.config.ts --outdir debug/out"
   },
   "devDependencies": {
-    "@pandacss/dev": "^0.17.0",
-    "@pandacss/types": "^0.17.0",
+    "@pandacss/dev": "^0.52.0",
+    "@pandacss/types": "^0.52.0",
     "@radix-ui/colors": "3.0.0",
-    "@types/node": "^20.8.7",
-    "tsup": "^7.2.0"
+    "@types/node": "^22.13.1",
+    "outdent": "^0.8.0",
+    "tsup": "^8.3.6"
   },
   "peerDependencies": {
-    "@pandacss/dev": ">=0.0.1",
-    "@radix-ui/colors": ">=0.1.0"
+    "@pandacss/dev": ">=0.52.0",
+    "@radix-ui/colors": ">=3.0.0"
   },
-  "packageManager": "pnpm@8.6.7"
+  "packageManager": "bun@1.2.2"
 }

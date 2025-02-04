@@ -4,12 +4,21 @@ import { getSemanticTokens } from "./semantic-tokens";
 import { getConditions } from "./conditions";
 import { RadixColorScales } from "./types";
 
+const DEFAULT_AUTO_P3 = false;
 const DEFAULT_DARK_MODE_CONDITION = ".dark &";
+const DEFAULT_DARK_MODE = false;
+const DEFAULT_COLOR_SCALES = [];
+const DEFAULT_NAME = "radix-colors";
 
 /**
  * Options for the preset.
  */
 export interface PresetOptions {
+  /**
+   * The name of the preset.
+   * @default "radix-colors"
+   */
+  name?: string;
   /**
    * Enable dark mode. If `true`, dark mode will
    * be enabled using the default condition.
@@ -49,26 +58,33 @@ export interface PresetOptions {
  * @returns The preset
  */
 export function createPreset(options?: PresetOptions): Preset {
-  const darkMode = options?.darkMode ?? false;
+  const name = options?.name ?? DEFAULT_NAME;
 
-  // Get the dark mode condition if dark mode is enabled
-  const darkModeCondition = darkMode
+  const darkMode = options?.darkMode ?? DEFAULT_DARK_MODE;
+  const isDarkMode = typeof darkMode === "boolean" ? darkMode : darkMode.condition !== undefined;
+
+  const darkModeCondition = isDarkMode
     ? typeof darkMode === "object"
       ? darkMode.condition
       : DEFAULT_DARK_MODE_CONDITION
     : undefined;
 
+  const autoP3 = options?.autoP3 ?? DEFAULT_AUTO_P3;
+  
+  const colorScales = options?.colorScales ?? DEFAULT_COLOR_SCALES;
+
   return definePreset({
+    name,
     conditions: {
-      extend: getConditions(darkModeCondition),
+      extend: getConditions(darkModeCondition, autoP3),
     },
     theme: {
       extend: {
         semanticTokens: {
           colors: getSemanticTokens(
-            !!darkMode,
-            options?.autoP3,
-            options?.colorScales
+            colorScales,
+            isDarkMode,
+            autoP3,
           ),
         },
       },

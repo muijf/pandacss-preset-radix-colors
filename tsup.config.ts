@@ -6,7 +6,7 @@ export default defineConfig((options) => ({
   dts: true,
   clean: true,
   minify: false,
-  outDir: "dist",
+  outDir: "out",
   external: ["@pandacss/dev", "@radix-ui/colors"],
   ...options,
 }));

@@ -1,87 +1,70 @@
-import { Scale, getScales } from "./radix-colors";
-import { RadixColorScale, RadixColorScales } from "./types";
-import { keysToObj, mergeObjs } from "./utils";
+import * as colors from "@radix-ui/colors";
+import { RadixColorScale } from "./types";
 
-// // TODO: Maybe clean up a little bit, it's hard to read.
-export function getSemanticTokens(
-  darkMode?: boolean,
-  autoP3?: boolean,
-  colorScales: RadixColorScales = []
-) {
-  let scales = getScales(darkMode);
+function getColors() {
+  const t = {
+    ...Object.entries(colors)
+      .filter(([key]) => !key.includes("default"))
+      .map(([key, value]) => {
+        const newKey = key.split(/(Dark|P3|A)/)
+          .map(x => x.toLowerCase())
+          .filter(Boolean)
+          .join(".");
 
-  if (darkMode) scales = scales.concat(getScales(false).filter((x) => !x.dark));
+        const newValue = { 
+          ...Object.values(value).map((x, i) => ({ [i]: x })).flat()
+        };
 
-  return mergeObjs(
-    {},
-    ...scales
-      .filter(
-        (scale) =>
-          colorScales.length === 0 ||
-          colorScales.includes(scale.name as RadixColorScale)
-      )
-      .map((scale) => {
-        let lightScale: Scale | undefined = undefined;
-        let darkScale: Scale | undefined = undefined;
-        let p3Scale: Scale | undefined = undefined;
+        return { [newKey]: newValue };
+      }).flat()
+  };
 
-        if (darkMode && !scale.dark && !scale.tags.includes("light"))
-          darkScale = scales.find(
-            (x) =>
-              x.name === scale.name &&
-              x.alpha === scale.alpha &&
-              x.p3 === scale.p3 &&
-              x.dark
-          );
-
-        if (!darkScale && autoP3 && !scale.p3)
-          p3Scale = scales.find(
-            (x) =>
-              x.name === scale.name &&
-              x.alpha === scale.alpha &&
-              x.dark === scale.dark &&
-              x.p3
-          );
-
-        if (darkScale)
-          lightScale = scale.tags.includes("light")
-            ? scale
-            : scales.find(
-                (x) =>
-                  x.name === scale.name &&
-                  x.alpha === scale.alpha &&
-                  x.dark === scale.dark &&
-                  x.p3 === scale.p3 &&
-                  x.tags.includes("light")
-              );
-
-        return keysToObj(
-          scale.tags,
-          Object.assign(
-            {},
-            ...Object.entries(scale.shades).map(([i, color]) => {
-              let value: any = color;
-
-              if (darkScale)
-                value = {
-                  base: `{colors.${lightScale.path}.${i}}`,
-                  _dark: `{colors.${darkScale.path}.${i}}`,
-                };
-
-              if (p3Scale)
-                value = {
-                  base: color,
-                  _p3: `{colors.${p3Scale.path}.${i}}`,
-                };
-
-              return {
-                [i]: {
-                  value,
-                },
-              };
-            })
-          )
-        );
-      })
-  );
+  return t;
 }
+
+console.dir(getColors(), { depth: null });
+
+// export function getSemanticTokens(scales: RadixColorScale[], isDarkMode: boolean = false, autoP3: boolean = false) {
+//   const result: Record<string, any> = {};
+
+//   let colorEntries = Object.entries(colors);
+
+//   // Filter out default and non-included scales
+//   colorEntries = colorEntries.filter(([key]) => !key.includes("default"));
+
+//   for (const [key, value] of colorEntries) {
+//     const keys = key.split(/(Dark|P3|A)/).map(x => x.toLowerCase()).filter(Boolean);
+
+//     if(!scales.includes(keys.join(".") as RadixColorScale)) continue;
+
+//     const isDark = keys.includes("dark");
+//     if(!isDark && isDarkMode)
+//       keys.splice(1, 0, "light");
+
+//     let curr = result;
+//     for (let i = 0; i < keys.length; i++) {
+//       const k = keys[i];
+
+//       if (i === keys.length - 1) {
+//         if (!curr[k]) curr[k] = {};
+
+//         let j = 1;
+//         for (const color of Object.values(value)) {
+//           let value = {};
+
+//           if(isDarkMode && !isDark)
+//             value = { base: color, _dark: `{colors.}` };
+//           else 
+//             value = color
+
+//           curr[k][j++] = { value }
+//         }
+//       } else {
+//         if (!curr[k]) curr[k] = {};
+//         curr = curr[k];
+//       }
+//     }
+//   }
+  
+//   return result;
+// }
