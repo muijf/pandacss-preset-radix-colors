@@ -1,0 +1,12 @@
+{
+  "name": "pandacss-preset-radix-colors-debug",
+  "private": true,
+  "scripts": {
+    "debug": "panda debug --outdir ./out"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.53.1",
+    "pandacss-preset-radix-colors": "workspace:*"
+  },
+  "packageManager": "pnpm@8.6.7"
+}

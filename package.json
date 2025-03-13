@@ -1,46 +1,25 @@
 {
-  "name": "pandacss-preset-radix-colors",
-  "version": "0.2.0",
-  "author": "Milan de Kruijf <contact@milandekruijf.com>",
-  "description": "Brings Radix Colors to 🐼 PandaCSS",
-  "license": "MIT",
-  "keywords": [
-    "css",
-    "styling",
-    "preset",
-    "dark-mode",
-    "chakra-ui",
-    "radix-ui",
-    "pandacss",
-    "radix-colors"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/milandekruijf/pandacss-preset-radix-colors.git"
-  },
-  "bugs": {
-    "url": "https://github.com/milandekruijf/pandacss-preset-radix-colors/issues"
-  },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "build": "tsup",
-    "prepublish": "pnpm debug",
-    "debug": "pnpm build && panda debug -c debug/panda.config.ts"
+    "release": "changeset publish",
+    "release:dev": "changeset version --snapshot dev && changeset publish --tag dev",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "format": "prettier --write src/**/*.ts"
   },
   "devDependencies": {
-    "@pandacss/dev": "^0.17.0",
-    "@pandacss/types": "^0.17.0",
+    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/cli": "^2.28.1",
+    "@pandacss/dev": "^0.53.1",
+    "@pandacss/types": "^0.53.1",
     "@radix-ui/colors": "3.0.0",
-    "@types/node": "^20.8.7",
-    "tsup": "^7.2.0"
+    "@types/node": "^22.13.10",
+    "@vitest/coverage-v8": "^3.0.8",
+    "prettier": "^3.5.3",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
   },
   "peerDependencies": {
     "@pandacss/dev": ">=0.0.1",

@@ -1,0 +1,63 @@
+{
+  "name": "pandacss-preset-radix-colors",
+  "version": "0.2.0",
+  "description": "Brings Radix Colors to 🐼 PandaCSS",
+  "keywords": [
+    "css",
+    "styling",
+    "preset",
+    "dark-mode",
+    "chakra-ui",
+    "radix-ui",
+    "pandacss",
+    "radix-colors"
+  ],
+  "homepage": "https://github.com/muijf/pandacss-preset-radix-colors",
+  "bugs": {
+    "url": "https://github.com/muijf/pandacss-preset-radix-colors/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muijf/pandacss-preset-radix-colors.git"
+  },
+  "license": "MIT",
+  "author": "Muijf <contact@muijf.com>",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "gen-types": "bun scripts/gen-types.ts"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.53.1",
+    "@pandacss/types": "^0.53.1",
+    "@radix-ui/colors": "3.0.0",
+    "@types/node": "^22.13.10",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "@pandacss/dev": ">=0.0.1",
+    "@radix-ui/colors": ">=0.1.0"
+  },
+  "packageManager": "pnpm@8.6.7",
+  "publishConfig": {
+    "access": "public"
+  }
+}

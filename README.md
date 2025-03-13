@@ -87,22 +87,41 @@ presets: [
 ],
 ```
 
+## Development
+
+### Testing
+
+The project uses [Vitest](https://vitest.dev/) for testing. The test suite covers all the main functionality of the preset.
+
+To run the tests:
+
+```bash
+# Run tests once
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage report
+npm run test:coverage
+```
+
 ## Attributions
 
 - [Radix](https://github.com/radix-ui) team for creating the wonderfully crafted colors
 - [Chakra](https://github.com/chakra-ui) team for creating [🐼 PandaCSS](https://panda-css.com/)
 
-[contributors-shield]: https://img.shields.io/github/contributors/milandekruijf/pandacss-preset-radix-colors.svg?style=for-the-badge
-[contributors-url]: https://github.com/milandekruijf/pandacss-preset-radix-colors/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/milandekruijf/pandacss-preset-radix-colors.svg?style=for-the-badge
-[forks-url]: https://github.com/milandekruijf/pandacss-preset-radix-colors/network/members
-[stars-shield]: https://img.shields.io/github/stars/milandekruijf/pandacss-preset-radix-colors.svg?style=for-the-badge
-[stars-url]: https://github.com/milandekruijf/pandacss-preset-radix-colors/stargazers
-[issues-shield]: https://img.shields.io/github/issues/milandekruijf/pandacss-preset-radix-colors.svg?style=for-the-badge
-[issues-url]: https://github.com/milandekruijf/pandacss-preset-radix-colors/issues
-[license-shield]: https://img.shields.io/github/license/milandekruijf/pandacss-preset-radix-colors.svg?style=for-the-badge
-[license-url]: https://github.com/milandekruijf/pandacss-preset-radix-colors/blob/main/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/muijf/pandacss-preset-radix-colors.svg?style=for-the-badge
+[contributors-url]: https://github.com/muijf/pandacss-preset-radix-colors/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/muijf/pandacss-preset-radix-colors.svg?style=for-the-badge
+[forks-url]: https://github.com/muijf/pandacss-preset-radix-colors/network/members
+[stars-shield]: https://img.shields.io/github/stars/muijf/pandacss-preset-radix-colors.svg?style=for-the-badge
+[stars-url]: https://github.com/muijf/pandacss-preset-radix-colors/stargazers
+[issues-shield]: https://img.shields.io/github/issues/muijf/pandacss-preset-radix-colors.svg?style=for-the-badge
+[issues-url]: https://github.com/muijf/pandacss-preset-radix-colors/issues
+[license-shield]: https://img.shields.io/github/license/muijf/pandacss-preset-radix-colors.svg?style=for-the-badge
+[license-url]: https://github.com/muijf/pandacss-preset-radix-colors/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/milandekruijf
+[linkedin-url]: https://www.linkedin.com/company/muijf/
 [npm-shield]: https://img.shields.io/npm/dw/pandacss-preset-radix-colors?style=for-the-badge
 [npm-url]: https://www.npmjs.com/package/pandacss-preset-radix-colors
