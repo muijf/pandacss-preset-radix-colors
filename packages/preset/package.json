@@ -22,41 +22,26 @@
   },
   "license": "MIT",
   "author": "Muijf <contact@muijf.com>",
-  "exports": {
-    ".": {
-      "source": "./src/index.ts",
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": {
-        "types": "./dist/index.d.mts",
-        "default": "./dist/index.mjs"
-      }
-    },
-    "./package.json": "./package.json"
-  },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "tsup",
-    "gen-types": "bun scripts/gen-types.ts"
+    "build": "bun run scripts/build.ts",
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage",
+    "prepublishOnly": "bun run build",
+    "publish": "cd dist && npm publish"
   },
   "devDependencies": {
-    "@pandacss/dev": "^0.53.1",
-    "@pandacss/types": "^0.53.1",
+    "@pandacss/dev": "^1.8.1",
+    "@pandacss/types": "^1.8.1",
     "@radix-ui/colors": "3.0.0",
-    "@types/node": "^22.13.10",
-    "tsup": "^8.4.0",
-    "typescript": "^5.8.2"
+    "@types/node": "^25.0.8",
+    "bunup": "^0.16.20",
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "@pandacss/dev": ">=0.0.1",
     "@radix-ui/colors": ">=0.1.0"
   },
-  "packageManager": "pnpm@8.6.7",
   "publishConfig": {
     "access": "public"
   }

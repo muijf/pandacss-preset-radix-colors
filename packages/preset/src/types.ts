@@ -1,257 +1,157 @@
-export const radixColorScales = [
-  "amber",
-  "amber.a",
-  "amber.dark",
-  "amber.dark.a",
-  "amber.dark.p3",
-  "amber.dark.p3.a",
-  "amber.p3",
-  "amber.p3.a",
-  "black.a",
-  "black.p3.a",
-  "blue",
-  "blue.a",
-  "blue.dark",
-  "blue.dark.a",
-  "blue.dark.p3",
-  "blue.dark.p3.a",
-  "blue.p3",
-  "blue.p3.a",
-  "bronze",
-  "bronze.a",
-  "bronze.dark",
-  "bronze.dark.a",
-  "bronze.dark.p3",
-  "bronze.dark.p3.a",
-  "bronze.p3",
-  "bronze.p3.a",
-  "brown",
-  "brown.a",
-  "brown.dark",
-  "brown.dark.a",
-  "brown.dark.p3",
-  "brown.dark.p3.a",
-  "brown.p3",
-  "brown.p3.a",
-  "crimson",
-  "crimson.a",
-  "crimson.dark",
-  "crimson.dark.a",
-  "crimson.dark.p3",
-  "crimson.dark.p3.a",
-  "crimson.p3",
-  "crimson.p3.a",
-  "cyan",
-  "cyan.a",
-  "cyan.dark",
-  "cyan.dark.a",
-  "cyan.dark.p3",
-  "cyan.dark.p3.a",
-  "cyan.p3",
-  "cyan.p3.a",
-  "gold",
-  "gold.a",
-  "gold.dark",
-  "gold.dark.a",
-  "gold.dark.p3",
-  "gold.dark.p3.a",
-  "gold.p3",
-  "gold.p3.a",
-  "grass",
-  "grass.a",
-  "grass.dark",
-  "grass.dark.a",
-  "grass.dark.p3",
-  "grass.dark.p3.a",
-  "grass.p3",
-  "grass.p3.a",
-  "gray",
-  "gray.a",
-  "gray.dark",
-  "gray.dark.a",
-  "gray.dark.p3",
-  "gray.dark.p3.a",
-  "gray.p3",
-  "gray.p3.a",
-  "green",
-  "green.a",
-  "green.dark",
-  "green.dark.a",
-  "green.dark.p3",
-  "green.dark.p3.a",
-  "green.p3",
-  "green.p3.a",
-  "indigo",
-  "indigo.a",
-  "indigo.dark",
-  "indigo.dark.a",
-  "indigo.dark.p3",
-  "indigo.dark.p3.a",
-  "indigo.p3",
-  "indigo.p3.a",
-  "iris",
-  "iris.a",
-  "iris.dark",
-  "iris.dark.a",
-  "iris.dark.p3",
-  "iris.dark.p3.a",
-  "iris.p3",
-  "iris.p3.a",
-  "jade",
-  "jade.a",
-  "jade.dark",
-  "jade.dark.a",
-  "jade.dark.p3",
-  "jade.dark.p3.a",
-  "jade.p3",
-  "jade.p3.a",
-  "lime",
-  "lime.a",
-  "lime.dark",
-  "lime.dark.a",
-  "lime.dark.p3",
-  "lime.dark.p3.a",
-  "lime.p3",
-  "lime.p3.a",
-  "mauve",
-  "mauve.a",
-  "mauve.dark",
-  "mauve.dark.a",
-  "mauve.dark.p3",
-  "mauve.dark.p3.a",
-  "mauve.p3",
-  "mauve.p3.a",
-  "mint",
-  "mint.a",
-  "mint.dark",
-  "mint.dark.a",
-  "mint.dark.p3",
-  "mint.dark.p3.a",
-  "mint.p3",
-  "mint.p3.a",
-  "olive",
-  "olive.a",
-  "olive.dark",
-  "olive.dark.a",
-  "olive.dark.p3",
-  "olive.dark.p3.a",
-  "olive.p3",
-  "olive.p3.a",
-  "orange",
-  "orange.a",
-  "orange.dark",
-  "orange.dark.a",
-  "orange.dark.p3",
-  "orange.dark.p3.a",
-  "orange.p3",
-  "orange.p3.a",
-  "pink",
-  "pink.a",
-  "pink.dark",
-  "pink.dark.a",
-  "pink.dark.p3",
-  "pink.dark.p3.a",
-  "pink.p3",
-  "pink.p3.a",
-  "plum",
-  "plum.a",
-  "plum.dark",
-  "plum.dark.a",
-  "plum.dark.p3",
-  "plum.dark.p3.a",
-  "plum.p3",
-  "plum.p3.a",
-  "purple",
-  "purple.a",
-  "purple.dark",
-  "purple.dark.a",
-  "purple.dark.p3",
-  "purple.dark.p3.a",
-  "purple.p3",
-  "purple.p3.a",
-  "red",
-  "red.a",
-  "red.dark",
-  "red.dark.a",
-  "red.dark.p3",
-  "red.dark.p3.a",
-  "red.p3",
-  "red.p3.a",
-  "ruby",
-  "ruby.a",
-  "ruby.dark",
-  "ruby.dark.a",
-  "ruby.dark.p3",
-  "ruby.dark.p3.a",
-  "ruby.p3",
-  "ruby.p3.a",
-  "sage",
-  "sage.a",
-  "sage.dark",
-  "sage.dark.a",
-  "sage.dark.p3",
-  "sage.dark.p3.a",
-  "sage.p3",
-  "sage.p3.a",
-  "sand",
-  "sand.a",
-  "sand.dark",
-  "sand.dark.a",
-  "sand.dark.p3",
-  "sand.dark.p3.a",
-  "sand.p3",
-  "sand.p3.a",
-  "sky",
-  "sky.a",
-  "sky.dark",
-  "sky.dark.a",
-  "sky.dark.p3",
-  "sky.dark.p3.a",
-  "sky.p3",
-  "sky.p3.a",
-  "slate",
-  "slate.a",
-  "slate.dark",
-  "slate.dark.a",
-  "slate.dark.p3",
-  "slate.dark.p3.a",
-  "slate.p3",
-  "slate.p3.a",
-  "teal",
-  "teal.a",
-  "teal.dark",
-  "teal.dark.a",
-  "teal.dark.p3",
-  "teal.dark.p3.a",
-  "teal.p3",
-  "teal.p3.a",
-  "tomato",
-  "tomato.a",
-  "tomato.dark",
-  "tomato.dark.a",
-  "tomato.dark.p3",
-  "tomato.dark.p3.a",
-  "tomato.p3",
-  "tomato.p3.a",
-  "violet",
-  "violet.a",
-  "violet.dark",
-  "violet.dark.a",
-  "violet.dark.p3",
-  "violet.dark.p3.a",
-  "violet.p3",
-  "violet.p3.a",
-  "white.a",
-  "white.p3.a",
-  "yellow",
-  "yellow.a",
-  "yellow.dark",
-  "yellow.dark.a",
-  "yellow.dark.p3",
-  "yellow.dark.p3.a",
-  "yellow.p3",
-  "yellow.p3.a",
-] as const;
+import * as colors from "@radix-ui/colors";
 
+/**
+ * Helper type to transform a color scale name to its path format.
+ * Splits on "Dark", "P3", and "A", then joins with dots.
+ */
+type TransformScaleName<T extends string> =
+  T extends `${infer Prefix}Dark${infer Rest}`
+    ? `${Lowercase<Prefix>}.dark${TransformScaleName<Rest>}`
+    : T extends `${infer Prefix}P3${infer Rest}`
+      ? `${Lowercase<Prefix>}.p3${TransformScaleName<Rest>}`
+      : T extends `${infer Prefix}A${infer Rest}`
+        ? `${Lowercase<Prefix>}.a${TransformScaleName<Rest>}`
+        : Lowercase<T>;
+
+/**
+ * Helper type to extract and transform all color scale keys.
+ */
+type ColorScaleKeys = {
+  [K in keyof typeof colors as K extends string
+    ? K extends `${string}default${string}`
+      ? never
+      : TransformScaleName<K>
+    : never]: true;
+};
+
+/**
+ * Helper function to transform a scale name to path format.
+ */
+function transformScaleName(scale: string): string {
+  return scale
+    .split(/(Dark|P3|A)/)
+    .map((x) => x.toLowerCase())
+    .filter(Boolean)
+    .join(".");
+}
+
+/**
+ * All available Radix color scales.
+ * Automatically derived from @radix-ui/colors with full type safety and autocomplete.
+ */
+export const radixColorScales = Object.keys(colors)
+  .filter((scale): scale is keyof typeof colors => !scale.includes("default"))
+  .map(transformScaleName) as unknown as Array<keyof ColorScaleKeys>;
+
+/**
+ * A single Radix color scale path.
+ *
+ * @example "amber", "blue.dark", "gray.p3", "red.dark.a"
+ */
 export type RadixColorScale = (typeof radixColorScales)[number];
+
+/**
+ * An array of Radix color scale paths for filtering.
+ */
 export type RadixColorScales = RadixColorScale[];
+
+/**
+ * Configuration for dark mode support.
+ */
+export interface DarkModeConfig {
+  /**
+   * The CSS condition/selector used to apply dark mode styles.
+   * This condition will be used as a modifier in your style objects (e.g., `_dark`).
+   *
+   * @example `.dark &` - Applies when an ancestor has the `.dark` class
+   * @example `[data-theme='dark'] &` - Applies when parent has `data-theme="dark"`
+   * @example `@media (prefers-color-scheme: dark) &` - Applies based on system preference
+   *
+   * @default `.dark &`
+   */
+  condition: string;
+
+  /**
+   * Whether dark mode is enabled. Set to `false` to disable dark mode functionality.
+   * This allows you to easily toggle dark mode on/off programmatically.
+   *
+   * @default true
+   */
+  enabled?: boolean;
+}
+
+/**
+ * Configuration options for the Radix Colors preset.
+ */
+export interface PresetOptions {
+  /**
+   * Enable dark mode support. Colors will generate both light and dark variants.
+   * When enabled, a `light` variant will be automatically added to ensure colors
+   * can be kept light even in dark mode contexts.
+   *
+   * @example
+   * ```ts
+   * // Use default dark mode condition (.dark &)
+   * darkMode: true
+   *
+   * // Use custom dark mode condition
+   * darkMode: { condition: "[data-theme='dark'] &" }
+   *
+   * // Disable dark mode programmatically
+   * darkMode: { condition: ".dark &", enabled: false }
+   * ```
+   */
+  darkMode?: boolean | DarkModeConfig;
+
+  /**
+   * Automatically use DCI-P3 color variants when the user's device supports wide color gamut.
+   * This will conditionally apply the P3 color variant using the `_p3` modifier when
+   * the browser supports it via `@media (color-gamut: p3)`.
+   *
+   * When both dark mode and autoP3 are enabled, tokens will intelligently choose
+   * the appropriate variant based on both conditions.
+   *
+   * @default false
+   *
+   * @example
+   * ```ts
+   * autoP3: true  // Uses P3 variant when available
+   * ```
+   */
+  autoP3?: boolean;
+
+  /**
+   * Specify which Radix color scales to include in the preset using path-based filtering.
+   * This can be used to reduce the generated CSS size by including only the colors you need.
+   * All scales are included by default when not specified.
+   *
+   * You can filter at any level of specificity:
+   * - Base colors: "amber", "blue", "gray"
+   * - Dark variants: "amber.dark", "blue.dark"
+   * - Alpha variants: "gray.a", "slate.dark.a"
+   * - P3 variants: "blue.p3", "red.dark.p3"
+   * - Specific variants: "amber.dark.p3.a"
+   *
+   * All variants beneath your specified path will be included automatically.
+   * For example, providing "amber.dark" will include "amber.dark", "amber.dark.a",
+   * "amber.dark.p3", and "amber.dark.p3.a".
+   *
+   * @default [] (includes all scales)
+   *
+   * @example
+   * ```ts
+   * // Include only gray and blue colors with all their variants
+   * colorScales: ["gray", "blue"]
+   *
+   * // Include only dark variants of amber and blue
+   * colorScales: ["amber.dark", "blue.dark"]
+   *
+   * // Include only P3 colors and dark P3 colors
+   * colorScales: ["gray.p3", "blue.dark.p3"]
+   *
+   * // Mix different specificity levels
+   * colorScales: ["gray", "blue.dark", "red.p3"]
+   * ```
+   */
+  colorScales?: RadixColorScales;
+}

@@ -4,9 +4,7 @@
   "scripts": {
     "debug": "panda debug --outdir ./out"
   },
-  "devDependencies": {
-    "@pandacss/dev": "^0.53.1",
+  "dependencies": {
     "pandacss-preset-radix-colors": "workspace:*"
-  },
-  "packageManager": "pnpm@8.6.7"
+  }
 }

@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "lib": ["ESNext"],
+    "lib": [
+      "ESNext"
+    ],
     "target": "ESNext",
     "module": "ESNext",
     "moduleDetection": "force",
@@ -13,8 +15,11 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noPropertyAccessFromIndexSignature": true,
-    "outDir": "packages/preset/dist",
+    "rootDir": "src",
+    "outDir": "dist",
     "declaration": true
   },
-  "include": ["packages/preset/src/**/*.ts", "__tests__/**/*.ts"]
+  "include": [
+    "src/**/*.ts"
+  ]
 }

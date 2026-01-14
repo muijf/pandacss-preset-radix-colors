@@ -4,9 +4,9 @@
   "scripts": {
     "dev": "panda studio"
   },
-  "devDependencies": {
-    "@pandacss/dev": "^0.53.1",
+  "dependencies": {
+    "@pandacss/dev": "^1.8.1",
+    "@pandacss/studio": "^1.8.1",
     "pandacss-preset-radix-colors": "workspace:*"
-  },
-  "packageManager": "pnpm@8.6.7"
+  }
 }

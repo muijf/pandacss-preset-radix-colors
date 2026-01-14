@@ -1,6 +1,15 @@
 import { defineConfig } from "@pandacss/dev";
-import pandacssRadixColors from "pandacss-preset-radix-colors";
+import presetRadixColors from "pandacss-preset-radix-colors";
 
 export default defineConfig({
-  presets: [pandacssRadixColors()],
+  presets: [
+    presetRadixColors({
+      darkMode: {
+        enabled: true,
+        condition: ".dark &",
+      },
+      autoP3: true,
+      colorScales: ["gray", "blue.dark", "red.p3.a"],
+    }),
+  ],
 });
