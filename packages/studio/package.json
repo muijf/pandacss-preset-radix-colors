@@ -6,7 +6,6 @@
   },
   "dependencies": {
     "@pandacss/dev": "^1.8.1",
-    "@pandacss/studio": "^1.8.1",
-    "pandacss-preset-radix-colors": "workspace:*"
+    "@pandacss/studio": "^1.8.1"
   }
 }

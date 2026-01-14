@@ -1,5 +1,5 @@
 import { defineConfig } from "@pandacss/dev";
-import presetRadixColors from "pandacss-preset-radix-colors";
+import presetRadixColors from "../preset/dist";
 
 export default defineConfig({
   presets: [presetRadixColors()],

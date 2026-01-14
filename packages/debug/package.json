@@ -3,8 +3,5 @@
   "private": true,
   "scripts": {
     "debug": "panda debug --outdir ./out"
-  },
-  "dependencies": {
-    "pandacss-preset-radix-colors": "workspace:*"
   }
 }
