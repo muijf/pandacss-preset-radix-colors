@@ -3,7 +3,8 @@
     "format": "prettier --write **/*.ts"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "examples/*"
   ],
   "packageManager": "bun@1.3.6"
 }
