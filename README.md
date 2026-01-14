@@ -1,14 +1,21 @@
+<div align="center">
+
+# 🐼 PandaCSS preset for Radix Colors
+
 [![Downloads][npm-shield]][npm-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
-# 🐼 PandaCSS preset for Radix Colors
+**Brings [Radix Colors](https://www.radix-ui.com/colors) to [🐼 PandaCSS](https://panda-css.com/)**
 
-Brings [Radix Colors](https://www.radix-ui.com/colors) to [🐼 PandaCSS](https://panda-css.com/)
+*A PandaCSS preset that integrates all Radix UI colors with support for dark mode, DCI-P3 wide color gamut, and customizable color scale filtering.*
+
+[npm](https://www.npmjs.com/package/pandacss-preset-radix-colors) • [GitHub](https://github.com/muijf/pandacss-preset-radix-colors) • [Issues](https://github.com/muijf/pandacss-preset-radix-colors/issues)
+
+</div>
 
 ## Table of Contents
 
