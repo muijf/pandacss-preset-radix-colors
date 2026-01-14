@@ -6,6 +6,7 @@ export default defineConfig({
     presetRadixColors({
       darkMode: true,
       autoP3: true,
+      colorScales: ["gray", "blue", "red"],
     }),
     "@pandacss/preset-panda",
   ],
