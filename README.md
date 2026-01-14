@@ -18,7 +18,6 @@ Brings [Radix Colors](https://www.radix-ui.com/colors) to [🐼 PandaCSS](https:
   - [Dark mode](#dark-mode)
   - [Color scales](#color-scales)
   - [Auto DCI-P3](#auto-dci-p3)
-- [TypeScript Support](#typescript-support)
 - [Examples](#examples)
 - [Development](#development)
 - [Attributions](#attributions)
@@ -113,26 +112,6 @@ radixColorsPreset({ autoP3: true })
 ```
 
 The `_p3` modifier becomes available in style objects. P3 condition is always added (even when `autoP3: false`) for manual use.
-
-## TypeScript Support
-
-Full type safety and autocomplete support. Exported types: `PresetOptions`, `DarkModeConfig`, `RadixColorScale`, `RadixColorScales`, and `radixColorScales` constant.
-
-> [!TIP]
-> Use the `radixColorScales` constant for autocomplete when filtering colors. TypeScript will provide full IntelliSense support for all valid color scale paths.
-
-```ts
-import radixColorsPreset, {
-  type PresetOptions,
-  radixColorScales,
-} from "pandacss-preset-radix-colors";
-
-const options: PresetOptions = {
-  darkMode: { condition: "[data-theme='dark'] &" },
-  autoP3: true,
-  colorScales: ["gray", "blue"], // Autocomplete available
-};
-```
 
 ## Examples
 
